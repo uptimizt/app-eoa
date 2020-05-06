@@ -1,6 +1,7 @@
 # app
 
-Empty project.
+- local http://localhost:1234
+
 
 ## Building and running on localhost
 
@@ -24,7 +25,7 @@ npm run build-prod
 
 ## Running
 
-Open the file `dist/index.html` in your browser
+Open the file `docs/index.html` in your browser
 
 ## Credits
 

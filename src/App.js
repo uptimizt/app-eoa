@@ -1,5 +1,6 @@
 
-import React from "react";
+import React, { useState, useEffect } from 'react';
+
 import BottomNavigationBar from './components/BottomNavigationBar.js';
 
 import {
@@ -17,7 +18,10 @@ import {
 
 export default function App(props) {
 
-  const { name } = props
+  const [login, setLogin] = useState( '' );
+  const siteURL = 'yoursite_here';
+
+  const { name } = props;
 
   return (
 
