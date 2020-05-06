@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm docs/*",
     "start": "parcel src/index.html -d docs",
-    "build-prod": "parcel build src/index.html -d docs"
+    "build-prod": "parcel build src/index.html -d docs --public-url ./app-eoa/"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.13",
