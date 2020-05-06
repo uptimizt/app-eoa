@@ -24,12 +24,15 @@ class Dashboard extends React.Component {
         }).then(function (response) {
             if ( response.status === 200 ) {
                 const data = response.data;
+                console.log(1);
                 _this.setState( {user:data});
                 
             }
         })
         .catch(function (error) {
-            _this.Logout();
+            console.log(2);
+
+            // _this.Logout();
         });
 
     }
@@ -49,6 +52,7 @@ class Dashboard extends React.Component {
                 <div className="jumbotron">
                     Welcome { nickname }
                     <p>I think your name is { first_name } { last_name}</p>
+                    <pre>token is { this.props.token } </pre>
                 </div>
             </div>
         );
