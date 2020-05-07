@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 import BottomNavigationBar from './components/BottomNavigationBar.js';
+import PostList from './components/PostList.js';
 
 import {
   Container,
@@ -18,25 +19,8 @@ import {
 
 
 
-import '@wordpress/components/build-style/style.css';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-
-
 
 export default function App(props) {
-
-  const [login, setLogin] = useState('');
-  const siteURL = 'https://bizzapps.ru';
-
-  useEffect(() => {
-    const localLogin = localStorage.getItem('login');
-    // If we have logged in, set it.
-    // console.log(localLogin);
-    if ( localLogin ) {
-      setLogin( localLogin );
-    }
-  }, [login]);
 
 
   const { name } = props;
@@ -47,6 +31,7 @@ export default function App(props) {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm">
+
         <Box
           boxShadow={3}
           bgcolor="background.paper"
@@ -58,13 +43,7 @@ export default function App(props) {
             Posts {name}
           </Typography>
 
-          {
-            login && <Dashboard url={siteURL} token={login} setLogin={setLogin} />
-          }
-
-          {
-            !login && <Login url={siteURL} setLogin={setLogin} />
-          }
+          <PostList/>
 
           <List className="posts-list">
 

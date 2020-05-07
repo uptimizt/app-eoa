@@ -2,6 +2,7 @@
 
 - local http://localhost:1234
 
+- demo https://uptimizt.github.io/app-eoa/
 
 ## Building and running on localhost
 

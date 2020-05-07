@@ -8,11 +8,9 @@ import {
     makeStyles,
 } from '@material-ui/core';
 
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-
-
+import HomeIcon from '@material-ui/icons/Home';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 
 export default function BottomNavigationBar() {
@@ -54,9 +52,9 @@ export default function BottomNavigationBar() {
             <BottomNavigation
                 showLabels
             >
-                <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-                <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+                <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+                <BottomNavigationAction label="Down" icon={<ArrowDownwardIcon />} />
+                <BottomNavigationAction label="Up" icon={<ArrowUpwardIcon />} />
             </BottomNavigation>
         </AppBar>
     );
