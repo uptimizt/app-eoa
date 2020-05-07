@@ -23,7 +23,7 @@ import {
 export default function App(props) {
 
 
-  const { name } = props;
+  const { title } = props;
 
   return (
 
@@ -39,8 +39,8 @@ export default function App(props) {
           p={3}
           mb={11}
         >
-          <Typography variant="h1" component="h2">
-            Posts {name}
+          <Typography variant="h3" component="body">
+            {title}
           </Typography>
 
           <PostList/>
