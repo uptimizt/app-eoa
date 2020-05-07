@@ -30,9 +30,8 @@ class Dashboard extends React.Component {
             }
         })
         .catch(function (error) {
-            console.log(2);
 
-            // _this.Logout();
+            _this.Logout();
         });
 
     }
@@ -52,7 +51,6 @@ class Dashboard extends React.Component {
                 <div className="jumbotron">
                     Welcome { nickname }
                     <p>I think your name is { first_name } { last_name}</p>
-                    <pre>token is { this.props.token } </pre>
                 </div>
             </div>
         );

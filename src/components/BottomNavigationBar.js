@@ -1,6 +1,13 @@
 import React from 'react';
 
 import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import {
 
   BottomNavigation,
   BottomNavigationAction,
@@ -12,6 +19,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 export default function BottomNavigationBar() {
   const useStyles = makeStyles((theme) => ({
@@ -48,20 +56,33 @@ export default function BottomNavigationBar() {
 
   return (
 
-    <AppBar position="fixed" color="primary" className={classes.appBar}>
-      <BottomNavigation
-        showLabels
-      >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction
-          label="GitHub"
-          icon={<GitHubIcon />}
-          href="https://github.com/uptimizt/app-eoa/"
-          target="_blank"
-        />
-        <BottomNavigationAction label="Down" icon={<ArrowDownwardIcon />} />
-        <BottomNavigationAction label="Up" icon={<ArrowUpwardIcon />} />
-      </BottomNavigation>
-    </AppBar>
+    <Router>
+      <AppBar position="fixed" color="primary" className={classes.appBar}>
+        <BottomNavigation
+          showLabels
+        >
+          <BottomNavigationAction
+            label="Home"
+            icon={<HomeIcon />}
+            component={Link}
+            to="/"
+            href="/"
+          />
+          <BottomNavigationAction
+            label="GitHub"
+            icon={<GitHubIcon />}
+            href="https://github.com/uptimizt/app-eoa/"
+            target="_blank"
+          />
+          <BottomNavigationAction
+            label="My"
+            icon={<AccountBoxIcon />}
+            href="/my"
+          />
+          <BottomNavigationAction label="Down" icon={<ArrowDownwardIcon />} />
+          <BottomNavigationAction label="Up" icon={<ArrowUpwardIcon />} />
+        </BottomNavigation>
+      </AppBar>
+    </Router>
   );
 }

@@ -5,6 +5,15 @@ import BottomNavigationBar from './components/BottomNavigationBar.js';
 import PostList from './components/PostList.js';
 import Console from './components/Console.js';
 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 import {
   Container,
   List,
@@ -27,38 +36,41 @@ export default function App(props) {
   const { title } = props;
 
   return (
+    <Router>
 
 
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="sm">
 
-        <Box
-          boxShadow={3}
-          bgcolor="background.paper"
-          m={3}
-          p={3}
-          mb={11}
-        >
           <Typography variant="h3" component="body">
             {title}
           </Typography>
 
-          {/* <Console/> */}
+          <Box
+            boxShadow={3}
+            bgcolor="background.paper"
+            m={3}
+            p={3}
+            mb={11}
+          >
 
-          <PostList/>
+            <Switch>
+              <Route path="/my">
+                <Console />
+              </Route>
+              <Route path="/">
+                <PostList />
+              </Route>
+            </Switch>
 
-          <List className="posts-list">
 
+          </Box>
 
-          </List>
-
-
-        </Box>
-
-      </Container>
-      <BottomNavigationBar />
-    </React.Fragment>
+        </Container>
+        <BottomNavigationBar />
+      </React.Fragment>
+    </Router>
 
   );
 

@@ -18,8 +18,6 @@ import {
 
 
 import '@wordpress/components/build-style/style.css';
-// import Login from './components/Login';
-// import Dashboard from './components/Dashboard';
 
 
 
@@ -44,14 +42,10 @@ export default function Console(props) {
 
 
         <Box
-          boxShadow={3}
-          bgcolor="background.paper"
-          m={3}
-          p={3}
-          mb={11}
+       
         >
-          <Typography variant="h1" component="h2">
-            Posts {name}
+          <Typography variant="h5" component="body">
+            My Account
           </Typography>
 
           {
@@ -62,10 +56,7 @@ export default function Console(props) {
             !login && <Login url={siteURL} setLogin={setLogin} />
           }
 
-          <List className="posts-list">
-
-
-          </List>
+    
 
 
         </Box>
