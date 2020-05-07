@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 
-import BottomNavigationBar from './components/BottomNavigationBar.js';
+import Login from './Login.js';
+import Dashboard from './Dashboard.js';
 
 import {
   Container,
@@ -17,8 +18,8 @@ import {
 
 
 import '@wordpress/components/build-style/style.css';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+// import Login from './components/Login';
+// import Dashboard from './components/Dashboard';
 
 
 

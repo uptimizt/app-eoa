@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import BottomNavigationBar from './components/BottomNavigationBar.js';
 import PostList from './components/PostList.js';
+import Console from './components/Console.js';
 
 import {
   Container,
@@ -42,6 +43,8 @@ export default function App(props) {
           <Typography variant="h3" component="body">
             {title}
           </Typography>
+
+          {/* <Console/> */}
 
           <PostList/>
 

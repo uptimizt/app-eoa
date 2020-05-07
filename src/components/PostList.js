@@ -69,6 +69,7 @@ export default function PostList() {
   const [loading, setLoading] = useState(false);
   // All articles that we have loaded
   const [articles, setArticles] = useState([]);
+
   // Pages with articles IDs
   const [articlesPages, setArticlesPages] = useState({});
   // Current Page
