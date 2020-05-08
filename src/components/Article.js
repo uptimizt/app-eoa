@@ -1,10 +1,8 @@
+import React, { useState, useEffect } from 'react';
+
 
 
 //https://www.ibenic.com/headless-wordpress-displaying-articles/
-
-
-
-
 
 /**
 * Not Found Page
@@ -25,7 +23,7 @@ function PageNotFound() {
  */
 function fetchArticleBySlug(slug) {
 
-  const [notFoundSlugs, setNotFoundSlugs] = useState([]); // Adding not found slugs
+    const [notFoundSlugs, setNotFoundSlugs] = useState([]); // Adding not found slugs
 
     const _url = url + 'wp/v2/posts?slug=' + slug;
     setLoading(true);
@@ -75,7 +73,7 @@ function GetArticleBySlug() {
 /**
  * Article Component
  */
-function Article(props) {
+export function Article(props) {
     const params = useParams();
     const the_article = props.article;
 

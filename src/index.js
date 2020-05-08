@@ -6,4 +6,4 @@ import "./styles.scss";
 
 
 var mountNode = document.getElementById("app");
-ReactDOM.render(<App title="Posts BizzApps" />, mountNode);
+ReactDOM.render(<App title="BizzApps" />, mountNode);

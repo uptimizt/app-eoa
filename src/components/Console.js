@@ -41,9 +41,7 @@ export default function Console(props) {
   return (
 
 
-        <Box
-       
-        >
+        <Box>
           <Typography variant="h5" component="body">
             My Account
           </Typography>
@@ -56,11 +54,7 @@ export default function Console(props) {
             !login && <Login url={siteURL} setLogin={setLogin} />
           }
 
-    
-
-
         </Box>
-
 
   );
 
